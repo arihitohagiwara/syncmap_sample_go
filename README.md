@@ -1,3 +1,3 @@
-# test_syncmap_go
+# syncmap_sample_go
 
-go1.9 syncmap test
+go1.9 syncmap sample
