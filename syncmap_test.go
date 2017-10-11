@@ -12,6 +12,12 @@ func TestStoreAndLoad(t *testing.T) {
 	if v != "test_value" || ok != true {
 		t.Error("TestStoreAndLoad faild.  v:", v, " ok:", ok)
 	}
+	testMap.Store("test_key", "test_value_update")
+	// valueの上書きテスト
+	v, ok = testMap.Load("test_key")
+	if v != "test_value_update" || ok != true {
+		t.Error("TestStoreAndLoad faild.  v:", v, " ok:", ok)
+	}
 	// keyがない場合のテスト
 	v, ok = testMap.Load("test_key1")
 	if v != nil || ok != false {

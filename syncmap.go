@@ -28,7 +28,7 @@ func (thisMap *syncMap) LoadOrStore(key, value interface{}) (actual interface{},
 	return thisMap.mapData.LoadOrStore(key, value)
 }
 
-// Range keyとvalueが同じものだけdumpしてみる
+// Range 試しにkeyとvalueが同じものだけdumpしてみる
 func (thisMap *syncMap) Range() {
 	thisMap.mapData.Range(func(key, value interface{}) bool {
 		if key == value {
